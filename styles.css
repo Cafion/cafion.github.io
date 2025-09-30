@@ -10857,7 +10857,7 @@ html {
 }
 .team-large-photo img {
   width: 100%;        /* takes full width on small screens */
-  max-width: 900px;   /* limits size on bigger screens */
+  max-width: 600px;   /* limits size on bigger screens */
   height: auto;       /* keeps proportions */
   display: block;
   margin: 0 auto;     /* centers it on desktop */
