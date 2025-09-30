@@ -10846,3 +10846,12 @@ html {
   background-repeat: no-repeat;
   min-height: 15rem;
 }
+.team-large-photo {
+  margin-top: 40px;   /* space between personnel photos and this one */
+  text-align: center; /* centers the image */
+}
+
+.team-large-photo img {
+  max-width: 100%;    /* makes it responsive */
+  border-radius: 10px; /* optional: rounded corners */
+}
