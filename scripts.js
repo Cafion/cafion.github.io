@@ -1,24 +1,25 @@
-// Get references to the image and button
+// Get the image and button elements
 const img = document.getElementById("BABYBONO");
 const btn = document.getElementById("changeImageBtn");
 
-// Define the image sources
-const image1 = "BABYBONO.jpg";     // the current image shown
-const image2 = "DEFAULTDUDE.jpg";  // the image you want to switch to
+// Define your image paths
+const image1 = "BABYBONO.jpg";   // the one you want to show by default
+const image2 = "DEFAULTDUDE.jpg"; // the other one
 
-// Track which image is currently displayed
+// 1️⃣ Set the default image when the page loads
+img.src = image1;
+
+// 2️⃣ Keep track of which one is showing
 let showingImage1 = true;
 
-// Add an event listener for the button click
+// 3️⃣ Handle button click
 btn.addEventListener("click", () => {
   if (showingImage1) {
-    img.src = image2; // switch to DEFAULTDUDE
-    btn.textContent = "Change Back";
+    img.src = image2;
+    btn.textContent = "0%";
   } else {
-    img.src = image1; // switch back to BABYBONO
-    btn.textContent = "Change Image";
+    img.src = image1;
+    btn.textContent = "100%";
   }
-
-  // Flip the state for next time
   showingImage1 = !showingImage1;
 });
