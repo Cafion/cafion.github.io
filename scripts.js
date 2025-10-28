@@ -1,10 +1,10 @@
 // Get the image and button elements
-const img = document.getElementById("BABYBONO.jpg");
+const img = document.getElementById("BABYBONO");
 const btn = document.getElementById("changeImageBtn");
 
 // Define your image paths
-const image1 = "BABYBONO.jpg";   // the one you want to show by default
-const image2 = "DEFAULTDUDE.jpg"; // the other one
+const image1 = "BABYBONO";   // the one you want to show by default
+const image2 = "DEFAULTDUDE"; // the other one
 
 //  Set the default image when the page loads
 img.src = image1;
