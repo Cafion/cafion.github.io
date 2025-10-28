@@ -6,20 +6,20 @@ const btn = document.getElementById("changeImageBtn");
 const image1 = "BABYBONO.jpg";   // the one you want to show by default
 const image2 = "DEFAULTDUDE.jpg"; // the other one
 
-// 1️⃣ Set the default image when the page loads
+//  Set the default image when the page loads
 img.src = image1;
 
-// 2️⃣ Keep track of which one is showing
+//  Keep track of which one is showing
 let showingImage1 = true;
 
-// 3️⃣ Handle button click
+//  Handle button click
 btn.addEventListener("click", () => {
   if (showingImage1) {
     img.src = image2;
-    btn.textContent = "0%";
+    btn.textContent = "Change Back";
   } else {
     img.src = image1;
-    btn.textContent = "100%";
+    btn.textContent = "Change Image";
   }
   showingImage1 = !showingImage1;
 });
