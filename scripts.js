@@ -1,5 +1,5 @@
 // Get the image and button elements
-const img = document.getElementById("BABYBONO");
+const img = document.getElementById("BABYBONO.jpg");
 const btn = document.getElementById("changeImageBtn");
 
 // Define your image paths
