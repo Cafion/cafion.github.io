@@ -439,10 +439,8 @@ legend + * {
   height: auto;
 }
 
-/* Line 444 - Fix [type=search] */
 [type=search] {
   outline-offset: -2px;
-  appearance: textfield;
   -webkit-appearance: textfield;
 }
 
@@ -462,10 +460,8 @@ legend + * {
   padding: 0;
 }
 
-/* Line 465 - Fix ::file-selector-button */
 ::file-selector-button {
   font: inherit;
-  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -10865,133 +10861,4 @@ html {
   height: auto;       /* keeps proportions */
   display: block;
   margin: 0 auto;     /* centers it on desktop */
-}
-/* Custom Cafion Color Palette */
-:root {
-  --cafion-primary: #26547C;      /* Dark blue */
-  --cafion-secondary: #F6E8EA;    /* Light pink */
-  --cafion-accent: #630323;       /* Dark red */
-}
-
-/* Apply custom colors to key elements */
-body {
-  background-color: var(--cafion-secondary);
-  color: var(--cafion-primary);
-}
-
-.navbar,
-.navbar-dark,
-footer {
-  background-color: var(--cafion-primary) !important;
-  color: #fff !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--cafion-primary);
-}
-
-a {
-  color: var(--cafion-accent);
-}
-
-a:hover {
-  color: #4d1729;
-}
-
-/* Button colors */
-.btn-primary,
-.btn-warning {
-  background-color: var(--cafion-accent) !important;
-  border-color: var(--cafion-accent) !important;
-  color: #fff !important;
-}
-
-.btn-primary:hover,
-.btn-warning:hover {
-  background-color: #4d1729 !important;
-  border-color: #4d1729 !important;
-}
-
-.btn-outline-primary,
-.btn-outline-warning {
-  color: var(--cafion-accent) !important;
-  border-color: var(--cafion-accent) !important;
-}
-
-.btn-outline-primary:hover,
-.btn-outline-warning:hover {
-  background-color: var(--cafion-accent) !important;
-  color: #fff !important;
-}
-
-/* Feature icons background */
-.feature {
-  background-color: var(--cafion-accent) !important;
-  color: #fff !important;
-}
-
-/* Header/section styling */
-header {
-  background-color: var(--cafion-primary) !important;
-  color: #fff !important;
-}
-
-.bg-light {
-  background-color: var(--cafion-secondary) !important;
-}
-
-.bg-dark {
-  background-color: var(--cafion-primary) !important;
-}
-
-/* Badge colors */
-.badge {
-  background-color: var(--cafion-accent) !important;
-}
-
-/* Card styling */
-.card {
-  border-color: var(--cafion-accent) !important;
-}
-
-/* ... existing code ... */
-body,
-html {
-  height: 100%;
-}
-
-.feature {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  font-size: 1.5rem;
-}
-
-.bg-featured-blog {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 15rem;
-}
-
-.team-large-photo {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.team-large-photo img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.team-large-photo img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
