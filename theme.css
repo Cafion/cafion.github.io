@@ -39,9 +39,63 @@ body {
   color: var(--brand-red) !important;
 }
 
-/* header/hero sections with red accent */
+/* Animated gradient background for header */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 header.bg-dark {
   border-bottom: 4px solid var(--brand-red);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient background layer */
+header.bg-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    #080357 0%,
+    #0077B6 25%,
+    #B80000 50%,
+    #0077B6 75%,
+    #080357 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+  z-index: 0;
+}
+
+/* Overlay for text readability */
+header.bg-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(8, 3, 87, 0.35);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure content stays above background */
+header.bg-dark > .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* primary / accent tweaks */
