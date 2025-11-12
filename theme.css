@@ -196,3 +196,13 @@ footer.bg-dark {
   color: var(--brand-red) !important;
   font-weight: 600;
 }
+
+/* Hero text enhancements */
+header.bg-dark .lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff !important;
+}
