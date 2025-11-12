@@ -1,0 +1,60 @@
+:root{
+  /* palette */
+  --brand-red: #B80000;
+  --brand-cream: #F5E9E2;
+  --brand-blue: #0077B6;
+  --brand-navy: #080357;
+  --brand-black: #07090F;
+
+  /* bootstrap overrides */
+  --bs-primary: var(--brand-blue);
+  --bs-danger: var(--brand-red);
+  --bs-dark: var(--brand-navy);
+  --bs-body-bg: var(--brand-cream);
+  --bs-body-color: var(--brand-black);
+  --bs-link-color: var(--brand-blue);
+  --bs-link-hover-color: color-mix(in srgb, var(--brand-blue) 75%, black 25%);
+}
+
+/* basic page colors */
+body {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+}
+
+/* navbar adjustments for contrast */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-toggler-icon {
+  color: var(--brand-cream) !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+/* primary / accent tweaks */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--bs-primary) 85%, black 15%);
+  border-color: color-mix(in srgb, var(--bs-primary) 85%, black 15%);
+}
+
+.badge.bg-danger {
+  background-color: var(--bs-danger) !important;
+  color: var(--brand-cream) !important;
+}
+
+/* offcanvas header contrast */
+.offcanvas, .card, .bg-light {
+  background-color: #fff; /* keep white for card/overlay readability */
+}
+.offcanvas-header .offcanvas-title {
+  color: var(--brand-black);
+}
+
+/* small utility: use red accent for links with .accent-red */
+a.accent-red { color: var(--brand-red); }
+a.accent-red:hover { color: color-mix(in srgb, var(--brand-red) 85%, black 15%); }
