@@ -23,13 +23,25 @@ body {
 }
 
 /* navbar adjustments for contrast */
-.navbar-dark .navbar-brand,
+.navbar-dark .navbar-brand {
+  color: var(--brand-red) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar-dark .navbar-brand:hover {
+  color: color-mix(in srgb, var(--brand-red) 85%, black 15%) !important;
+}
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-toggler-icon {
   color: var(--brand-cream) !important;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--brand-blue) !important;
+  color: var(--brand-red) !important;
+}
+
+/* header/hero sections with red accent */
+header.bg-dark {
+  border-bottom: 4px solid var(--brand-red);
 }
 
 /* primary / accent tweaks */
@@ -42,19 +54,91 @@ body {
   border-color: color-mix(in srgb, var(--bs-primary) 85%, black 15%);
 }
 
+/* red accent buttons */
+.btn-danger {
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+}
+.btn-danger:hover {
+  background-color: color-mix(in srgb, var(--brand-red) 85%, black 15%);
+  border-color: color-mix(in srgb, var(--brand-red) 85%, black 15%);
+}
+
 .badge.bg-danger {
-  background-color: var(--bs-danger) !important;
+  background-color: var(--brand-red) !important;
   color: var(--brand-cream) !important;
+}
+
+/* headings with red accent */
+h1, h2, h3 {
+  position: relative;
+}
+h1::before, h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background-color: var(--brand-red);
+}
+
+/* feature boxes red accent */
+.feature {
+  background: linear-gradient(135deg, var(--brand-red), color-mix(in srgb, var(--brand-red) 70%, var(--brand-blue))) !important;
 }
 
 /* offcanvas header contrast */
 .offcanvas, .card, .bg-light {
-  background-color: #fff; /* keep white for card/overlay readability */
+  background-color: #fff;
+}
+.offcanvas-header {
+  border-bottom: 2px solid var(--brand-red);
 }
 .offcanvas-header .offcanvas-title {
-  color: var(--brand-black);
+  color: var(--brand-red);
+  font-weight: 700;
 }
 
-/* small utility: use red accent for links with .accent-red */
-a.accent-red { color: var(--brand-red); }
-a.accent-red:hover { color: color-mix(in srgb, var(--brand-red) 85%, black 15%); }
+/* card borders and accents */
+.card {
+  border: 1px solid #ddd;
+  border-top: 3px solid var(--brand-red);
+}
+
+/* section dividers with red */
+hr {
+  border-color: var(--brand-red);
+  opacity: 0.5;
+}
+
+/* badge accents */
+.badge.bg-primary {
+  background-color: var(--brand-red) !important;
+}
+
+/* links and accents */
+a.accent-red {
+  color: var(--brand-red);
+  font-weight: 600;
+}
+a.accent-red:hover {
+  color: color-mix(in srgb, var(--brand-red) 85%, black 15%);
+}
+
+/* testimonial/quote section border */
+.fst-italic {
+  border-left: 4px solid var(--brand-red);
+  padding-left: 1rem;
+}
+
+/* footer accent */
+footer.bg-dark {
+  border-top: 4px solid var(--brand-red);
+}
+
+/* active nav link */
+.nav-link.active {
+  color: var(--brand-red) !important;
+  font-weight: 600;
+}
