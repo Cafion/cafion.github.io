@@ -10882,6 +10882,22 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+/* Fade + slide on load */
+.fade-slide-down {
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+.fade-slide-down.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure Bootstrap doesn’t override it */
+nav.navbar.fade-slide-down.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
 
 /* =========================================
    NAVBAR UPGRADE
@@ -10938,3 +10954,90 @@ html {
 .btn-outline-light:hover {
   transform: translateY(-2px) scale(1.05);
 }
+.transition {
+  transition: opacity 0.3s, transform 0.3s;
+}
+.transition:hover {
+  opacity: 0.8;
+}
+.fade-in {
+  opacity: 0;
+}
+.fade-in.active {
+  opacity: 1;
+}
+.scale-hover {
+  transition: transform 0.3s;
+}
+.scale-hover:hover {
+  transform: scale(1.1);
+}
+.box {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.box .card {
+  position: relative;
+  transform: rotateY(10deg);
+  transform-origin: center center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* styles.css */
+.feature-box {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box .feature {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 20px;
+}
+
+.feature-box .feature i {
+  font-size: 32px;
+}
+
+.feature-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 14px;
+}
+.slide-in {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 1200px) {
+  .justify-content-xl-start {
+    justify-content: flex-start !important;
+  }
+  .justify-content-xl-end {
+    justify-content: flex-end !important;
+  }
+  .justify-content-xl-center {
+    justify-content: center !important;
+  }
+  .justify-content-xl-between {
+    justify-content: space-between !important;
+  }
