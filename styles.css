@@ -10862,3 +10862,79 @@ html {
   display: block;
   margin: 0 auto;     /* centers it on desktop */
 }
+/* =========================================
+   GLOBAL MOTION SYSTEM
+   ========================================= */
+:root {
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 200ms var(--ease-smooth);
+  --transition-medium: 400ms var(--ease-smooth);
+  --transition-slow: 700ms var(--ease-smooth);
+}
+
+/* Fade + slide on load */
+.fade-slide-down {
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+.fade-slide-down.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   NAVBAR UPGRADE
+   ========================================= */
+.navbar {
+  transition:
+    background-color var(--transition-medium),
+    backdrop-filter var(--transition-medium),
+    padding var(--transition-medium),
+    box-shadow var(--transition-medium);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  background: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* On scroll */
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(14px);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effects */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+.navbar-nav .nav-link:hover {
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+/* Active link underline */
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: width var(--transition-medium);
+}
+
+/* Cart button hover */
+.btn-outline-light {
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+.btn-outline-light:hover {
+  transform: translateY(-2px) scale(1.05);
+}
