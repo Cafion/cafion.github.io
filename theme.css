@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
 :root{
   /* palette */
   --brand-red: #B80000;
@@ -212,7 +212,7 @@ header.bg-dark .lead {
 .navbar-dark .navbar-nav .nav-link {
   color: black !important;
   font-size: 1.15rem;             
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -225,7 +225,7 @@ header.bg-dark .lead {
 }
 /* === NAVBAR BRAND STYLING === */
 .navbar-dark .navbar-brand {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 1.7rem;
   letter-spacing: 1px;
   font-weight: 700;
@@ -234,9 +234,9 @@ header.bg-dark .lead {
 
 /* NAVBAR TEXT STYLING FIX */
 .navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;          /* white */
-  font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
+  color: #ffffff !important;          /* white */
+  font-size: 1.0rem;
+  font-family: 'Lexend', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -249,7 +249,7 @@ header.bg-dark .lead {
 /* BRAND TEXT */
 .navbar-dark .navbar-brand {
   color: #ffffff !important;  
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 1.7rem;
   letter-spacing: 1px;
   font-weight: 700;
