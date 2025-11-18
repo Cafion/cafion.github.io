@@ -10938,3 +10938,107 @@ html {
 .btn-outline-light:hover {
   transform: translateY(-2px) scale(1.05);
 }
+/* ======================================================
+   CAFION — Animation Add-On (Safe / Non-Breaking)
+   Paste at the bottom of styles.css
+   ====================================================== */
+
+/* Smooth fade + float-in reveal */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered reveal delays */
+.reveal-element[data-delay="1"] { transition-delay: .10s; }
+.reveal-element[data-delay="2"] { transition-delay: .20s; }
+.reveal-element[data-delay="3"] { transition-delay: .30s; }
+.reveal-element[data-delay="4"] { transition-delay: .40s; }
+.reveal-element[data-delay="5"] { transition-delay: .50s; }
+
+/* Feature box slide-in wrapper */
+.feature-box-wrapper {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    transition: all 0.7s cubic-bezier(.2, .8, .2, 1);
+}
+
+.feature-box-wrapper.slide-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* 3D floating icon */
+.feature-icon-3d {
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+/* Card tilt base */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform .25s ease, box-shadow .25s ease;
+    will-change: transform, box-shadow;
+}
+
+.tilt-card:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Ripple effect (Material style) */
+.btn {
+    overflow: hidden;
+    position: relative;
+}
+
+.btn .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgba(255,255,255,0.4);
+    pointer-events: none;
+    animation: rippleAnim 0.6s linear forwards;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Cart badge pulse */
+@keyframes cartPulse {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.cart-pulse {
+    animation: cartPulse 0.5s ease;
+}
+
+/* Page fade-in on load */
+body {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+/* Navbar hide/show safe transitions */
+.navbar {
+    transition: transform .35s ease, background-color .35s ease;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
